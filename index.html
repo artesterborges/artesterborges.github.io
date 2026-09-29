@@ -3,87 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Isso faz o Google te achar em 1º lugar ao pesquisar Ester Borges -->
-    <title>Ester Borges | Site Oficial</title>
+    <title>Ester Borges | Universo Multiartista</title>
     <link rel="icon" type="image/png" href="favicon.png">
     
+    <!-- Link para uma fonte mais estilosa e dramática -->
+    <link href="https://googleapis.com" rel="stylesheet">
+
     <style>
-        /* ESTILO DO ROCK/DARK MODERNO */
+        /* ESPAÇO SIDERAL PROFUNDO */
         body {
-            background-color: #121212; /* Fundo grafite escuro */
-            color: #ffffff; /* Texto branco */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #050508;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
+            /* Efeito sutil de estrelas fixas geradas por código */
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            background-position: 0 0, 40px 60px, 130px 270px;
         }
-        header {
+
+        /* MENU CONSTELAÇÃO FLUTUANTE */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(5, 5, 8, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(180px, #1a1a1a, #121212);
+            padding: 15px 0;
         }
-        h1 { font-size: 3rem; margin: 0; color: #e50914; /* Vermelho Rock */ }
-        h2 { font-size: 1.2rem; color: #aaaaaa; font-weight: 300; margin-top: 10px; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        section { margin-bottom: 50px; padding: 20px; background-color: #1e1e1e; border-radius: 8px; }
-        h3 { color: #e50914; border-bottom: 2px solid #333; padding-bottom: 10px; }
-        p { line-height: 1.6; color: #dddddd; }
-        
-        /* BOTÃO DE COMPRA ESTILIZADO */
-        .botao-venda {
-            display: inline-block;
-            background-color: #e50914;
-            color: white;
-            padding: 15px 30px;
+        nav a {
+            color: #aaaaaa;
             text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            margin-top: 15px;
+            margin: 0 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             transition: 0.3s;
         }
-        .botao-venda:hover { background-color: #b80710; }
+        nav a:hover { color: #b19ffb; text-shadow: 0 0 10px #b19ffb; }
+
+        /* CABEÇALHO COM O SEU BANNER DESENHADO */
+        header {
+            margin-top: 50px;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .banner-artes {
+            max-width: 100%;
+            width: 800px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(177, 159, 251, 0.2);
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+
+        /* SEÇÕES DO SEU UNIVERSO */
+        section {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: rgba(15, 15, 25, 0.7);
+            border: 1px solid rgba(177, 159, 251, 0.15);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: #b19ffb; /* Roxo Cósmico */
+            text-shadow: 0 0 15px rgba(177, 159, 251, 0.4);
+            margin-top: 0;
+            letter-spacing: 3px;
+        }
+        p { line-height: 1.8; color: #dddddd; font-size: 1.05rem; }
+
+        /* MOLDURAS PARA AS SUAS ILUSTRAÇÕES */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            margin-top: 25px;
+        }
+        .foto-quadrada {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid #b19ffb;
+            box-shadow: 0 0 20px rgba(177, 159, 251, 0.3);
+        }
+        .capa-livro {
+            width: 250px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 25px rgba(255,255,255,0.1);
+        }
+
+        /* BOTÃO CÓSMICO DE COMPRA */
+        .botao-venda {
+            display: inline-block;
+            background: linear-gradient(45deg, #6c5ce7, #b19ffb);
+            color: white;
+            padding: 16px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 20px rgba(108, 92, 231, 0.4);
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+        .botao-venda:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(177, 159, 251, 0.6);
+        }
     </style>
 </head>
 <body>
 
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav>
+        <a href="#biografia">Biografia</a>
+        <a href="#livro">O Livro</a>
+        <a href="#trilha">Trilha Sonora</a>
+        <a href="#portfolio">Ilustrações</a>
+        <a href="#avaliacoes">Resenhas</a>
+    </nav>
+
     <header>
-        <h1>Ester Borges</h1>
-        <h2>Escritora • Ilustradora • Compositora • Multiartista</h2>
+        <!-- Aqui vai carregar o seu banner desenhado no tamanho 1920x600 -->
+        <img src="topo.png" alt="Ester Borges - Universo Artístico" class="banner-artes" onerror="this.style.display='none';">
+        <h1 style="font-family:'Cinzel', serif; font-size: 3.5rem; margin: 20px 0 0 0; letter-spacing: 5px;">Ester Borges</h1>
+        <p style="color:#b19ffb; letter-spacing: 3px; text-transform: uppercase; font-size: 0.85rem; margin-top: 5px;">Literatura • Ilustração • Música</p>
     </header>
 
     <div class="container">
 
-        <!-- ABA SOBRE MIM -->
+        <!-- BIOGRAFIA -->
         <section id="biografia">
-            <h3>Biografia</h3>
-            <p>Olá! Meu nome é Ester Borges, tenho 15 anos e sou uma artista independente brasileira. Sejam bem-vindos ao meu universo criativo, onde misturo literatura, ilustrações autorais e a energia do rock.</p>
+            <h2>Origem Cósmica</h2>
+            <p>Olá! Meu nome é Ester Borges, tenho 15 anos e sou uma multiartista independente. Criadora do meu próprio universo, eu escrevo, ilustro, componho e dou vida às páginas e melodias que você encontra por aqui. Seja bem-vindo ao meu espaço sideral.</p>
         </section>
 
-        <!-- ABA DO LIVRO -->
+        <!-- O LIVRO -->
         <section id="livro">
-            <h3>Meu Livro Oficial</h3>
-            <p>Um projeto totalmente independente onde assino a autoria do texto, o design da capa e todas as ilustrações e brindes que acompanham esta jornada literária.</p>
-            <!-- Substitua o # pelo link da Amazon/UICLAP quando estiver pronto -->
-            <a href="#" class="botao-venda">Comprar Livro + Brindes Especiais</a>
+            <h2>O Livro & Seus Brindes</h2>
+            <div class="flex-container">
+                <!-- Espaço para a imagem da capa do livro -->
+                <img src="capa.png" alt="Capa do Livro" class="capa-livro" onerror="this.src='https://placeholder.com'">
+                <div style="flex: 1; min-width: 280px;">
+                    <p>Um projeto inteiramente autoral feito do absoluto zero. Além da narrativa densa e envolvente, assino cada traço das ilustrações e a produção minuciosa de milhões de brindes colecionáveis criados para expandir a sua experiência de leitura.</p>
+                    <a href="#" class="botao-venda">Garantir Meu Livro + Brindes Especiais</a>
+                </div>
+            </div>
         </section>
 
-        <!-- ABA DA TRILHA SONORA (SPOTIFY) -->
+        <!-- TRILHA SONORA -->
         <section id="trilha">
-            <h3>Trilha Sonora Oficial</h3>
-            <p>Ouça as composições musicais criadas especialmente para ambientar a leitura do livro:</p>
-            <!-- PLAYER PROVISÓRIO DO SPOTIFY (PODEMOS MUDAR PARA O SEU DEPOIS) -->
+            <h2>Frequência Sonora</h2>
+            <p>A literatura ganha peso através do som. Aperte o play e acompanhe os capítulos ouvindo as faixas e composições de rock instrumental criadas especialmente para ditar o ritmo desta jornada:</p>
             <iframe style="border-radius:12px" src="https://spotify.com" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </section>
 
-        <!-- ABA PORTFÓLIO / ARTES -->
+        <!-- ILUSTRAÇÕES / PORTFÓLIO -->
         <section id="portfolio">
-            <h3>Ilustrações & Artes</h3>
-            <p>Galeria visual com os conceitos, artes da capa e esboços do universo do livro. (Em breve)</p>
+            <h2>Galeria Visual</h2>
+            <p>Lampejos e esboços do universo escuro e detalhado do livro. Arrastando os seus desenhos para o GitHub com o nome 'brindes.png', ele aparecerá na moldura abaixo:</p>
+            <div class="flex-container" style="justify-content: center;">
+                <img src="brindes.png" alt="Ilustrações Autorais" class="foto-quadrada" onerror="this.src='https://placeholder.com'">
+            </div>
         </section>
 
-        <!-- ABA DE AVALIAÇÕES -->
+        <!-- RESENHAS -->
         <section id="avaliacoes">
-            <h3>Resenhas & Críticas</h3>
-            <p>O que os leitores estão achando na Amazon e redes sociais. (Em breve)</p>
+            <h2>Ecos do Universo</h2>
+            <p>O que as mentes leitoras estão dizendo sobre o livro na Amazon e nas profundezas da internet. (Em breve)</p>
         </section>
 
     </div>
